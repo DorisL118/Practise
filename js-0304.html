@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 表單結構 -->
+    <from>
+        <!-- 駝峰式命名
+            1. 小駝峰 => 第二單字開始字首大寫
+            2. 大駝峰 => 第一單字開始字首大寫（常數識別字）（REACT元件命名時）
+         -->
+        單價<input type="text" id="txtUnit"><br>
+        數量<input type="text" id="txtQty"><br>
+        <!-- onclick => 行為（事件） -->
+        <input type="button" value="計算" onclick="sum()">
+    </from>
+    <!-- 段落 -->
+    <p id="tot"></p>
+
+    <script>
+        // 建立自訂函式的時機點
+        // 1.網頁開啟時不會自動執行
+        // 2.而是「等待被執行」
+        // 自訂函式（副程式）
+        function sum() {
+            // 宣告變數
+            var a;
+            var b;
+            var c;
+
+            // 使用變數
+
+            // 取得單價給變數a            
+            a = document.getElementById("txtUnit").value;
+            // console.log(a);
+            // 取得數量給變數b
+            b = document.getElementById("txtQty").value;
+            // console.log(b);
+            // 產生運算結果給段落tot
+            c = a * b;
+            // 找9折
+            c = c * 0.9;
+            document.getElementById("tot").textContent = c;
+        }
+    </script>
+</body>
+
+</html>

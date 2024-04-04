@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // random
+        
+        // let b = 5;
+
+        // let a = prompt('1-100 請輸入數字');
+
+
+        function randomGame() {
+            let b = Math.floor(Math.random() * 100) + 1;
+            let err = 0;
+            let cha = 3;
+
+            while (err <= 3) {
+                let a = prompt('1-100 請輸入數字');
+
+                if (a == null || a == "") {
+                    alert("未輸入數字，請重新輸入")
+                    continue;
+                } if (a < 0 || a > 100) {
+                    alert("輸入數字有誤，請輸入範圍 1-100")
+                    continue;
+                }
+
+                if (a > b) {
+                    alert(`數字小於${a}，機會剩${cha}`);
+                    err++;
+                    cha--;
+                } else if (a < b) {
+                    alert(`數字大於${a}，機會剩${cha}`);
+                    err++;
+                    cha--;
+                } else {
+                    alert('正確');
+                    break;
+                }
+            }
+        }
+
+        randomGame()
+        
+
+    </script>
+</body>
+
+</html>

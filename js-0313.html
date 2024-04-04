@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        // for (a=2 ; a<= 9 ; a++){
+        //         for (b=1 ; b<= 9 ; b++){
+        //         // a += 1
+        //         // b += 1
+        //         // c = a*b
+        //         document.write(`${a}*${b}=${a*b} &nbsp;&nbsp;`);
+        //         }
+        //     document.write('<br>');
+        //     } 
+
+
+        // let pw = 'abc';
+        // let err = 0;
+        // while (true){
+        //     let upw = prompt('請輸入密碼');
+        //     if (upw === 'abc'){
+        //         break;
+        //     } else {
+        //         err++;
+        //         if (err === 3){
+        //             document.write('錯誤已達三次，請通知管理員')
+        //             break;
+        //         }
+        //     }
+        // }
+        // document.write(`您錯誤了${err}次才密碼正確`)
+
+        // let a = prompt('1-10 請輸入數字');
+        // let b = Math.floor(Math.random() * 10) + 1;
+        // let err = 0
+
+        // while (err < 3) {
+        //     if (a > b){
+        //         alert(`數字大於${a}，再猜一次`);
+        //         err++;
+        //     } else if (a < b) {
+        //         alert(`數字小於${a}，再猜一次`);
+        //         err++;
+        //     } else  
+        //         alert('正確');  
+
+        // }
+
+
+        // random
+        let b = Math.floor(Math.random() * 100) + 1;
+        // let b = 5;
+
+        // let a = prompt('1-100 請輸入數字');
+        let err = 0;
+        let cha = 3;
+
+        while (err <= 3) {
+            let a = prompt('1-100 請輸入數字');
+
+            if (a == null || a == "") {
+                alert("未輸入數字，請重新輸入")
+                continue;
+            } if (a < 0 || a > 100) {
+                alert("輸入數字有誤，請輸入範圍 1-100")
+                continue;
+            }
+
+            if (a > b) {
+                alert(`數字小於${a}，機會剩${cha}`);
+                err++;
+                cha--;
+            } else if (a < b) {
+                alert(`數字大於${a}，機會剩${cha}`);
+                err++;
+                cha--;
+            } else {
+                alert('正確');
+                break;
+            }
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

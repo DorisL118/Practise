@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getLotNum1() {
+            function getRandNum() {
+                return Math.floor(Math.random() * 49) + 1;
+            }
+            // 1.大樂透  => 第一區1-49號挑6個號碼 + 第二區1-49號挑1個號碼
+
+            let arrNum = [];    //存放號碼的陣列
+            for (let i = 0; i <= 6; i++) {
+                let lotNum = getRandNum();
+                if (arrNum.indexOf(lotNum) == -1) {
+                    arrNum.push(lotNum);
+                }
+            }
+            arrNum.sort((a, b) => {
+                return a - b;
+            });
+            console.log(`第一區：${arrNum}`);
+
+            // 特別號
+            let lotNum2 = getRandNum();
+            console.log(`特別號：${lotNum2}`);
+        }
+
+        getLotNum1()
+
+    </script>
+</body>
+
+</html>

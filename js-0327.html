@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // const arr = [5, 60, 3, 90, 33];
+        // function maxArr {
+        //     return(n) => arr.map(Math.max())
+        // }
+
+
+        // console.log(n)
+
+        // const arr = [5, 60, 3, 90, 33];
+        // function maxArr() {
+        //     return Math.max(...arr);
+        // }
+
+        // console.log(maxArr()); // 輸出 90
+
+        // min = arr[0];
+        // max = arr[0];
+
+        // arr.map((n) => {
+        //     if (n > max){
+        //         max = n;
+        //     } else if (n < min){
+        //         min = n;
+        //     }
+        // })
+        // console.log(`Max=${max}, min=${min}`)    
+// 在這個上下文中，n > max 是一個比較表達式，用來比較變數 n 和變數 max 的值。這個表達式會返回一個布林值，即 true 或 false，表示 n 是否大於 max。
+// 在程式碼中，這個比較表達式 n > max 用來檢查陣列中的每個元素 n 是否比目前已知的最大值 max 更大。如果 n 比 max 更大，則會將 max 更新為 n 的值，以便在迭代結束後得到陣列中的最大值。
+    
+    
+
+        let lotNum;
+        for (let i = 1; i < 6; i++){
+            lotNum = Math.floor(Math.random() * 49) + 1;
+            console.log(lotNum);
+        }
+
+        let arrNum = [lotNum]
+        console.log(arrNum.includes(lotNum))
+
+        const arrToSet = new Set(arrNum); 
+        const uniqueArray = [...arrToSet]; 
+
+    </script>
+
+</body>
+
+</html>

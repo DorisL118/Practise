@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    // 使用輸入視窗，輸入帳號與密碼
+    let a = prompt("請輸入帳號");
+    let b = prompt("請輸入密碼");
+    
+    let strEmail = 'A12345@gmail.com';
+    let strPass = '12345';
+
+    // 帳號正確+密碼正確 => 帳密ok
+    // 帳號正確+密碼錯誤 => 密碼err
+    // 帳號錯誤+密碼正確 => 帳號err
+    // 帳號錯誤+密碼錯誤 => 帳密err
+
+    if (a !== strEmail && b == strPass){
+        document.write('帳號err')
+    } else if  (a == strEmail && b !== strPass){
+        document.write('密碼err')
+    } else if (a !== strEmail || b !== strPass){
+        document.write('帳密err')
+    } else {
+        document.write('帳密ok')
+    }
+        
+    </script>
+</body>
+</html>

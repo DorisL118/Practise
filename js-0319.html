@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 請輸入分數N次，直到輸入-1時結束，並統計出下列結果
+
+        // 及格人數：
+        // 不及格人數：
+        // 班級總分：
+        // 班級平均（小數2位）：
+
+        // let score = prompt("請輸入成績");
+        // let i = 0
+        // let y = 0
+
+        // if (score == null) {
+        //     document.write('輸入錯誤 請重新輸入');
+        // } else if (score >= 60) {
+        //     document.write('及格');
+        //     i++;
+        // } else (score < 60) {
+        //     document.write('及格');
+        //     y++;
+        // }
+
+        let passCount = 0;
+        let failCount = 0;
+        let totalScore = 0;
+        let numberOfScores = 0;
+
+        while (true) {
+            let score = prompt("請輸入分數（輸入 -1 結束）");
+            // 輸入 -1 表示結束
+            if (score === "-1") {
+                break;
+            }
+            // 跳過這次迴圈回到初始
+            if (score == null) {
+                alert("您按了取消，請重新輸入");
+                continue;
+            }
+            // 將字串型別轉換為數字 檢查資料是否為Nan
+            score = Number(score);
+            if (isNaN(score)) {
+                alert("輸入資料有誤，請重新輸入");
+                continue;
+            }
+
+            if (score < 0 || score > 100) {
+                alert("分數超過有效範圍，請重新輸入");
+                continue;
+            }
+
+            // 是否及格
+            if (score >= 60) {
+                passCount++;
+            } else {
+                failCount++;
+            }
+            totalScore += score
+        }
+
+        // 平均分數
+        if (passCount + failCount > 0) {
+            averageScore = totalScore / (passCount + failCount);
+            averageScore = averageScore.toFixed(2);
+        }
+
+
+        // 結果
+        document.write(`及格人數 ${passCount} <br>`);
+        document.write(`不及格人數 ${failCount} <br>`);
+        document.write(`班級總分 ${totalScore} <br>`);
+        document.write(`班級平均 ${averageScore} <br>`);
+
+
+
+    </script>
+</body>
+
+</html>

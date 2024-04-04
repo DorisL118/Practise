@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // BMI = 體重(公斤) / 身高的平方(公尺)
+        let a = prompt("請輸入體重(公斤)");
+        let b = prompt("請輸入身高(公尺)");
+        let BMI = a / (b ** 2);
+
+        // 參考對照表顯示對應結果
+        // https://depart.femh.org.tw/dietary/3OPD/BMI.htm
+
+        if (BMI >= 35) {
+            document.write('異常範圍 : 重度肥胖');
+        } else if (BMI >= 30 && BMI < 35) {
+            document.write('異常範圍 : 中度肥胖');
+        } else if (BMI >= 27 && BMI < 30) {
+            document.write('異常範圍 : 輕度肥胖');
+        } else if (BMI >= 24 && BMI < 27) {
+            document.write('異常範圍 : 過重');
+        } else if (BMI >= 18.5 && BMI < 24) {
+            document.write('正常範圍');
+        } else if (BMI < 18.5) {
+            document.write('異常範圍 :體重過輕');
+        }
+
+    </script>
+</body>
+
+</html>
