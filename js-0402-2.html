@@ -93,6 +93,14 @@
             alert("無效的遊戲代號");
         }
 
+        big: { gameDisplayName: '大樂透', maxNumber: 39, pickCount: 5 }
+        xxx: {},
+        ooo: {},
+        }
+        const game = gameConfig[input]
+        if (!game) alert()
+
+        getLotXXXX({ max: game.maxNumber, count: game.pickCount })
 
     </script>
 </body>
